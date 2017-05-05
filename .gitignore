@@ -10,6 +10,7 @@
 /test/version_tmp/
 /tmp/
 tags
+client_secret.json
 
 # Used by dotenv library to load environment variables.
 # .env
