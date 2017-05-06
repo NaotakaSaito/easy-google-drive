@@ -63,7 +63,7 @@ class EasyGoogleDrive::Drive
 			puts url
 			code = gets
 			credentials = authorizer.get_and_store_credentials_from_code(
-			user_id: user_id, code: code, base_url: OOB_URI)
+				user_id: user_id, code: code, base_url: OOB_URI)
 		end
 		credentials
 	end
@@ -118,7 +118,7 @@ class EasyGoogleDrive::Drive
 		end
 		target_split = target.split("/")
 		if target_split == nil then
-			if target == "~" or target == "¥" then
+			if target == "~" or target == "$" then
 				directory(target,path,list)
 				return
 			else
@@ -223,7 +223,7 @@ class EasyGoogleDrive::Drive
 			end
 		elsif target == "~" then
 			root(path,list)
-		elsif target == "¥"
+		elsif target == "$"
 			shared(path,list)
 		elsif target == "."
 			list(path,list)

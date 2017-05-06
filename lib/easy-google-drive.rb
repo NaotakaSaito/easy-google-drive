@@ -8,7 +8,8 @@ require 'fileutils'
 module EasyGoogleDrive
 end
 
-require_relative 'file_base.rb'
-require_relative 'file_api.rb'
-require_relative 'spreadsheet.rb'
+require_relative 'easy-google-drive/version.rb'
+require_relative 'easy-google-drive/file_base.rb'
+require_relative 'easy-google-drive/file_api.rb'
+require_relative 'easy-google-drive/spreadsheet.rb'
 

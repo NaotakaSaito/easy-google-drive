@@ -70,15 +70,15 @@ class EasyGoogleDrive::Spreadsheet < EasyGoogleDrive::Drive
 		@spreadsheet[:service] = service
 	end
 	def addNewLine(sheet,data)
-		
+
 		request_body = Google::Apis::SheetsV4::ValueRange.new
 		spreadsheet_id = @spreadsheet[:file].id
 		if sheet == "" then
 			range = "A:"+("A".ord + data.length).chr
-		else 
+		else
 			range = sheet
 		end
-		
+
 		value_range_object = {
 			majorDimension:"ROWS",
 			values: [data],
@@ -86,7 +86,7 @@ class EasyGoogleDrive::Spreadsheet < EasyGoogleDrive::Drive
 		update_res = @spreadsheet[:service].append_spreadsheet_value(spreadsheet_id, range, value_range_object, value_input_option: 'USER_ENTERED')
 		return update_res
 	end
-	def get(sheet,range)
+	def getData(sheet,range)
 		if sheet == "" then
 			get_range = range
 		else

@@ -136,7 +136,7 @@ class EasyGoogleDrive::Drive
 			if folder[:name] == "root" then
 				msg = msg +"~/"
 			elsif folder[:name] == "shared" then 
-				msg = msg + "¥/"
+				msg = msg + "$/"
 			else
 				msg = msg + folder[:name] +"/"
 			end
@@ -150,7 +150,7 @@ class EasyGoogleDrive::Drive
 			if folder[:name] == "root" then
 				path = "~"
 			elsif folder[:name] == "shared"
-				path = "¥"
+				path = "$"
 			else
 				path = path + "/" + folder[:name]
 			end
@@ -163,7 +163,7 @@ class EasyGoogleDrive::Drive
 		puts "EasyGoogleDrive::File.cd(""directory"")"
 		puts "EasyGoogleDrive::File.cd(""~"")"
 		puts "  move to root folder"
-		puts "EasyGoogleDrive::File.cd(""¥"")"
+		puts "EasyGoogleDrive::File.cd(""$"")"
 		puts "  move to shared folder"
 		puts "EasyGoogleDrive::File.cd("".."")"
 		puts "  move to upper folder"
