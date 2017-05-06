@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{"ruby library to use google drive simply and easily."}
   spec.description   = %q{"use Drive API V3 and Sheet API V4"}
-  spec.homepage      = "www.lapis-semi.com/lazurite-jp"
+  spec.homepage      = "http://www.lapis-semi.com/lazurite-jp"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
@@ -30,4 +30,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_dependency "google_drive", "~> 2.1.3"
+  spec.add_dependency "termcolor", "~> 1.2.2"
 end
