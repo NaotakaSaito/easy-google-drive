@@ -11,6 +11,7 @@
 /tmp/
 tags
 client_secret.json
+gdrive.dat
 
 # Used by dotenv library to load environment variables.
 # .env
