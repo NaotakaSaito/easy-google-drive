@@ -6,11 +6,9 @@ The library saves "gdrive.dat" in root folder of google drive.
 ## how to use
 1. install google drive api for ruby.
 ```bash
-$ sudo gem install google_drive
+$ sudo gem install easy-google-drive
 ```
-2.  install easy-google-drive
-
-3. setting of google drive
+2. setting of google drive
   1. access to [https://console.developers.google.com/](https://console.developers.google.com/)
 
   2. login google account
@@ -25,7 +23,7 @@ $ sudo gem install google_drive
   10. click download button. And change file name to "client_secret.json"
   11. move the file to project folder.
 
-4. execute sample program
+3. execute sample program
 ```bash
 $ ruby test_drive.rb
 ```
