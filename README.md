@@ -8,6 +8,11 @@ The library saves "gdrive.dat" in root folder of google drive.
 ```bash
 $ sudo gem install easy-google-drive
 ```
+
+  recommend to git it for sample execution.
+```bash
+$ git clone git://github.com/NaotakaSaito/easy-google-drive
+```
 2. setting of google drive
   1. access to [https://console.developers.google.com/](https://console.developers.google.com/)
 
