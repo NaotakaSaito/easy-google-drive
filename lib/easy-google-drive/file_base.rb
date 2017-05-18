@@ -103,7 +103,7 @@ class EasyGoogleDrive::Drive
 		end
 
 		path.clear
-		path.push({"name":"root","id":current_folder_id[0]})
+		path.push({name:"root",id:current_folder_id[0]})
 		list(path,file_list)
 		return
 	end
@@ -180,7 +180,7 @@ class EasyGoogleDrive::Drive
 			end
 			page_token = response.next_page_token
 		end while !page_token.nil?
-		path.push({"name":"shared","id":nil})
+		path.push({name:"shared",id:nil})
 		return 
 	end
 
@@ -233,7 +233,7 @@ class EasyGoogleDrive::Drive
 				end
 			newfolder = get_folderid(target,list)
 			if newfolder != nil then
-				path.push({"name":newfolder.name,"id":newfolder.id})
+				path.push({name:newfolder.name,id:newfolder.id})
 				list(path,list)
 			else
 				puts "folder not find:: "+target

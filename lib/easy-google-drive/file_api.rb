@@ -83,7 +83,7 @@ class EasyGoogleDrive::Drive
 		list.each do |folder|
 			list2=[]
 			tmp_path2 = []
-			tmp_path2.push({"name":folder.name,"id":folder.id})
+			tmp_path2.push({name:folder.name,id:folder.id})
 			list(tmp_path2,list2)
 			if list2 == [] then 
 				@service.delete_file(folder[:id])
