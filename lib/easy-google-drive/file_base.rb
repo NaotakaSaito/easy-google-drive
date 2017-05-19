@@ -87,7 +87,11 @@ class EasyGoogleDrive::Drive
 			current_folder_id = ref_file[0].parents
 		else
 			puts "ref file not found"
-			send(nil,"gdrive.dat","text/plain")
+			file_metadata = Google::Apis::DriveV3::File.new(
+				name: "gdrive.dat",
+				mine_type: 'application/vnd.google-apps.unknown',
+				)
+			@service.create_file(file_metadata, fields:'id')
 			begin
 				response = @service.list_files(
 					q: "name='gdrive.dat'",
