@@ -24,7 +24,7 @@ class EasyGoogleDrive::Drive
 
 	def mkdir(name)
 		parents = []
-		parents.push(@root_path.last.id)
+		parents.push(@root_path.last)
 		file_metadata = {
 			name: name,
 	  		parents: parents,
