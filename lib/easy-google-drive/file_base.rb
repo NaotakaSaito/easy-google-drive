@@ -208,14 +208,6 @@ class EasyGoogleDrive::Drive
 		end while !page_token.nil?
 		return
 	end
-	def cd(target)
-		path_split = target.split("/")
-		path_split.each do |folder|
-			if directory(folder,@root_path,@current_file_list) == false
-				return false
-			end
-		end
-	end
 	def directory(target,path,list)
 		if target == ".." then
 			if(path.length > 1) then
