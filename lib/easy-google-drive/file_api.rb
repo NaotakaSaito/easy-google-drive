@@ -60,7 +60,7 @@ class EasyGoogleDrive::Drive
 			end
 			list.each do |file|
 				if file.mime_type == "application/vnd.google-apps.folder" then
-					puts TermColor.parse("<blue>"+file.name+"</blue>")
+					puts TermColor.parse("<Cyan>"+file.name+"<Cyan>")
 				else
 					puts TermColor.parse(file.name)
 				end
